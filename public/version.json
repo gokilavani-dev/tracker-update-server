@@ -1,7 +1,8 @@
 {
-  "versionCode": 1,
-  "versionName": "1.0.0",
-  "mandatory": false,
-  "apkUrl": "https://YOUR-RENDER-URL.onrender.com/apk",
-  "notes": "Install the app for your attenadance tracker"
+  "versionCode": 2,
+  "versionName": "1.0.1",
+  "mandatory": true, 
+  "apkUrl": "https://tracker-update-server.onrender.com/apk",
+  "checksum": "38bbb911eeeb4644001757fde27857176b2684dcf0fb6200e543ec8c73ef6461",
+  "notes": "Bug fixes / improvements"
 }
