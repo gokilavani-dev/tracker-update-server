@@ -4,6 +4,10 @@ import path from "path";
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.get("/", (req, res) => {
+  res.sendFile(path.join(process.cwd(), "public/index.html"));
+});
+
 app.get("/version", (req, res) => {
   res.sendFile(path.join(process.cwd(), "public/version.json"));
 });
