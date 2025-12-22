@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>Tracker App Update</title>
-  <meta charset="UTF-8" />
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -15,18 +15,12 @@
     .card {
       background: white;
       padding: 30px;
-      width: 350px;
+      width: 360px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       text-align: center;
     }
-    h2 {
-      margin-bottom: 10px;
-    }
-    p {
-      color: #555;
-    }
-    a.button {
+    .btn {
       display: block;
       margin-top: 20px;
       padding: 12px;
@@ -36,18 +30,35 @@
       border-radius: 6px;
       font-weight: bold;
     }
-    a.button:hover {
-      background: #1558b0;
-    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h2>Tracker App</h2>
-    <p>Latest Version: 1.0.1</p>
-    <p>Internal Company App</p>
 
-    <a class="button" href="/apk">Download / Update APK</a>
-  </div>
+<div class="card">
+  <h2>Tracker App</h2>
+  <p id="version">Loading version...</p>
+  <p id="notes"></p>
+
+  <a id="downloadBtn" class="btn" href="#">Download</a>
+</div>
+
+<script>
+  fetch("/version")
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("version").innerText =
+        "Latest Version: " + data.versionName;
+
+      document.getElementById("notes").innerText =
+        data.notes || "";
+
+      document.getElementById("downloadBtn").href = "/apk";
+    })
+    .catch(() => {
+      document.getElementById("version").innerText =
+        "Unable to load version info";
+    });
+</script>
+
 </body>
 </html>
