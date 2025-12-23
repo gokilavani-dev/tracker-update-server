@@ -3,6 +3,6 @@
   "versionName": "1.0.2",
   "mandatory": true, 
   "apkUrl": "https://tracker-update-server.onrender.com/apk",
-  "checksum": "e99e564762ba6a16a0249d0de261c2e637b59b5ef9be50436d02b4388087b425",
+  "checksum": "a27cf0c9bb0634a2d43fe097eab0df9984e9bfb65a304dbbe1e6ea8c8e5843e1",
   "notes": "Bug fixes / improvements"
 }
