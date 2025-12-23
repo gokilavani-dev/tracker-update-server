@@ -1,8 +1,8 @@
 {
-  "versionCode": 3,
-  "versionName": "1.0.2",
+  "versionCode": 4,
+  "versionName": "1.0.3",
   "mandatory": true, 
   "apkUrl": "https://tracker-update-server.onrender.com/apk",
-  "checksum": "a27cf0c9bb0634a2d43fe097eab0df9984e9bfb65a304dbbe1e6ea8c8e5843e1",
+  "checksum": "a0354cf8c3fab9b4cc84d7ef46a91b1f490664b373254e94dbcb24c308bf2871a",
   "notes": "Bug fixes / improvements"
 }
